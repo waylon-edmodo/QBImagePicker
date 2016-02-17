@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Photos-->
@@ -10,13 +10,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="AlbumsViewController" id="zDO-wM-OC0" customClass="QBAlbumsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" id="C1H-8x-SSr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AlbumCell" id="xZZ-Gb-whL" customClass="QBAlbumCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xZZ-Gb-whL" id="35j-da-VM3">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="86"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K15-QT-84m">
@@ -56,13 +58,13 @@
                                                 <constraint firstAttribute="width" constant="68" id="n4M-Ef-NZb"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="tmU-WT-HVS">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Album Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="tmU-WT-HVS">
                                             <rect key="frame" x="102" y="22" width="465" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Photos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSh-gM-21m">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number of Photos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSh-gM-21m">
                                             <rect key="frame" x="102" y="46" width="465" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -89,7 +91,7 @@
                                     <outlet property="imageView2" destination="zry-tG-t25" id="CCZ-C0-Ksb"/>
                                     <outlet property="imageView3" destination="D7B-hz-XlI" id="tCP-JN-LHV"/>
                                     <outlet property="titleLabel" destination="tmU-WT-HVS" id="csl-is-Prt"/>
-                                    <segue destination="LdJ-Fx-WXA" kind="show" id="wU3-vs-rq4"/>
+                                    <segue destination="LdJ-Fx-WXA" kind="push" id="wU3-vs-rq4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -117,7 +119,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJV-2T-pJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="657" y="662"/>
+            <point key="canvasLocation" x="350.39999999999998" y="626.69333333333327"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6x0-TQ-wFC">
@@ -136,14 +138,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALa-RK-cGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-152" y="662"/>
+            <point key="canvasLocation" x="-81.066666666666663" y="626.69333333333327"/>
         </scene>
         <!--Album Title-->
         <scene sceneID="kY3-7w-Bmx">
             <objects>
                 <collectionViewController storyboardIdentifier="AssetsViewController" id="LdJ-Fx-WXA" customClass="QBAssetsViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="LWR-Wz-55v">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="L0n-CL-vAy">
@@ -154,7 +156,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AssetCell" id="Mie-DN-YAc" customClass="QBAssetCell">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="2" y="66" width="78" height="78"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
@@ -219,7 +221,6 @@
                                     <constraint firstItem="Fit-2n-KG7" firstAttribute="leading" secondItem="Mie-DN-YAc" secondAttribute="leading" id="0Jz-CQ-u0s"/>
                                     <constraint firstAttribute="trailing" secondItem="Fit-2n-KG7" secondAttribute="trailing" id="0u4-LK-Jfs"/>
                                     <constraint firstAttribute="trailing" secondItem="OyZ-If-PAI" secondAttribute="trailing" id="9bJ-Zm-2QQ"/>
-                                    <constraint firstItem="Fit-2n-KG7" firstAttribute="top" secondItem="Mie-DN-YAc" secondAttribute="top" id="Ldk-rB-qJJ"/>
                                     <constraint firstItem="lR8-T5-hPO" firstAttribute="leading" secondItem="Mie-DN-YAc" secondAttribute="leading" id="QY5-Ja-cvO"/>
                                     <constraint firstItem="OyZ-If-PAI" firstAttribute="leading" secondItem="Mie-DN-YAc" secondAttribute="leading" id="RKQ-Bi-t45"/>
                                     <constraint firstItem="OyZ-If-PAI" firstAttribute="top" secondItem="Mie-DN-YAc" secondAttribute="top" id="U2I-u0-MzL"/>
@@ -229,11 +230,6 @@
                                     <constraint firstAttribute="bottom" secondItem="OyZ-If-PAI" secondAttribute="bottom" id="xnr-Q5-s32"/>
                                     <constraint firstAttribute="bottom" secondItem="Fit-2n-KG7" secondAttribute="bottom" id="ypx-fM-k3a"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Ldk-rB-qJJ"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <outlet property="imageView" destination="OyZ-If-PAI" id="wMz-7M-jm4"/>
                                     <outlet property="overlayView" destination="lR8-T5-hPO" id="XLf-92-PKa"/>
@@ -242,10 +238,10 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FooterView" id="SdV-e9-H2L">
-                            <rect key="frame" x="0.0" y="146" width="600" height="66"/>
+                            <rect key="frame" x="0.0" y="146" width="320" height="66"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Photos and Videos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fce-cq-W8k">
+                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number of Photos and Videos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fce-cq-W8k">
                                     <rect key="frame" x="0.0" y="22" width="600" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -276,7 +272,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvd-rx-jUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1460" y="662"/>
+            <point key="canvasLocation" x="778.66666666666663" y="626.69333333333327"/>
         </scene>
     </scenes>
 </document>
