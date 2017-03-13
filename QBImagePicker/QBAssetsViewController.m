@@ -243,6 +243,17 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
                 break;
         }
         
+        switch (self.imagePickerController.mediaOrder) {
+            case QBImagePickerAssetCreationOrderAscending:
+                options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
+                break;
+            case QBImagePickerAssetCreationOrderDescending:
+                options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
+                break;
+            default:
+                break;
+        }
+        
         self.fetchResult = [PHAsset fetchAssetsInAssetCollection:self.assetCollection options:options];
         
         if ([self isAutoDeselectEnabled] && self.imagePickerController.selectedAssets.count > 0) {

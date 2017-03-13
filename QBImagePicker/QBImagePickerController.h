@@ -29,6 +29,11 @@ typedef NS_ENUM(NSUInteger, QBImagePickerMediaType) {
     QBImagePickerMediaTypeVideo
 };
 
+typedef NS_ENUM(NSUInteger, QBImagePickerAssetCreationOrder) {
+    QBImagePickerAssetCreationOrderAscending = 0,
+    QBImagePickerAssetCreationOrderDescending,
+};
+
 @interface QBImagePickerController : UIViewController
 
 @property (nonatomic, weak) id<QBImagePickerControllerDelegate> delegate;
@@ -37,6 +42,7 @@ typedef NS_ENUM(NSUInteger, QBImagePickerMediaType) {
 
 @property (nonatomic, copy) NSArray *assetCollectionSubtypes;
 @property (nonatomic, assign) QBImagePickerMediaType mediaType;
+@property (nonatomic, assign) QBImagePickerAssetCreationOrder mediaOrder;
 
 @property (nonatomic, assign) BOOL allowsMultipleSelection;
 @property (nonatomic, assign) NSUInteger minimumNumberOfSelection;
